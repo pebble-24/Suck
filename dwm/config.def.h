@@ -23,10 +23,15 @@ static const char col_bg0[] = "#282828";
 static const char col_orange[] = "#fe8019";
 static const char col_red[] = "#fb4934";
 
+/* Catppuccin Colours */
+static const char col_surface0[] = "#313244";
+static const char col_blue[] = "#89b4fa";
+static const char col_lavender[] = "#b4befe";
+
 static const char *colors[][3] = {
     /*               fg         bg         border   */
-    [SchemeNorm] = {col_gray3, col_bg0, col_bg0},
-    [SchemeSel] = {col_gray4, col_orange, col_orange},
+    [SchemeNorm] = {col_gray3, col_surface0, col_surface0},
+    [SchemeSel] = {col_gray4, col_lavender, col_blue},
 };
 
 /* tagging */
@@ -78,9 +83,10 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] =
     "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = {
-    "dmenu_run", "-m",  dmenumon,   "-fn", dmenufont, "-nb", col_gray1, "-nf",
-    col_gray3,   "-sb", col_orange, "-sf", col_gray4, NULL};
+static const char *dmenucmd[] = {"dmenu_run",  "-m",  dmenumon,     "-fn",
+                                 dmenufont,    "-nb", col_gray1,    "-nf",
+                                 col_gray3,    "-sb", col_lavender, "-sf",
+                                 col_surface0, NULL};
 static const char *termcmd[] = {"alacritty", NULL};
 
 static const Key keys[] = {
