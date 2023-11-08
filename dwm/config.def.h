@@ -93,6 +93,8 @@ static const Key keys[] = {
     /* modifier                     key        function        argument */
     {MODKEY | ShiftMask, XK_p, spawn, SHCMD("brightnessctl set +10%")},
     {MODKEY | ShiftMask, XK_o, spawn, SHCMD("brightnessctl set 10%-")},
+    {MODKEY, XK_e, spawn, SHCMD("emacs")},
+    {MODKEY, XK_Print, spawn, SHCMD("flameshot gui")},
     {MODKEY, XK_F5, spawn, SHCMD("setxkbmap gb")},
     {MODKEY, XK_F6, spawn, SHCMD("setxkbmap fi")},
     {MODKEY, XK_p, spawn, {.v = dmenucmd}},
